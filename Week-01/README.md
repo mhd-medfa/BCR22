@@ -1,5 +1,7 @@
 
-To familiarize myself with AI-Gym commands a python script by using the “Cartpole-v0” environment has been written and attached to this repo *Week-01/cartpole-v0.py*, where the agent performs 10 evaluation episodes (random actions, for 10 episodes 100 timesteps) by showing the behavior and by printing the step, the observation vector, the action vector, the reward, and the fitness (i.e. the cumulative reward)
+# Week-01
+
+In order to familiarize myself with AI-Gym commands a python script by using the “Cartpole-v0” environment has been written and attached to this repo **Week-01/cartpole-v0.py**, where the agent performs 10 evaluation episodes (random actions, for 10 episodes 100 timesteps) by showing the behavior and by printing the step, the observation vector, the action vector, the reward, and the fitness (i.e. the cumulative reward)
 
 - Three other classic control tasks (CartPole-v1, MountainCar-v0, MountainCarContinuous-v0) have been studied with code review for each of them.
 
