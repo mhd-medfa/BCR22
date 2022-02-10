@@ -87,7 +87,7 @@ Num | Observation  | Min  | Max
 
 ### Actions
 
-Type: Discrete(3)
+Discrete(3)
 
 Num | Action
 ----|-------------
