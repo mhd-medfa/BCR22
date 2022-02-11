@@ -44,7 +44,6 @@ def cartpole_v0():
 
         for t in range(100):
             env.render()
-            print("t = {}, observation: {}".format(t, observation))
             action = env.action_space.sample()
             observation, reward, done, info = env.step(action)
             print("t = {}, observation: {}".format(t, observation))
