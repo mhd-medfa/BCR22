@@ -1,5 +1,6 @@
 import gym
 import numpy as np
+from time import sleep
 
 class Network:
     def __init__(self, env) -> None:
@@ -54,6 +55,7 @@ class Network:
                 print("t = {}, observation: {}".format(t, observation))
                 print("t = {}, reward = {}, cumultative_reward = {}".format(t, reward, self.cumultative_reward))
                 t+=1
+                sleep(0.01)
         print("Episode {} finished after {} timesteps".format(i_episode, t))
         print("Cumulatitive reward: ", self.cumultative_reward)
         env.close()
