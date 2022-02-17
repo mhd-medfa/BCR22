@@ -62,5 +62,5 @@ class Network:
 
 env = gym.make("CartPole-v0")
 network = Network(env)
-fitness = network.evaluate(10)
+fitness = network.evaluate(100)
 
