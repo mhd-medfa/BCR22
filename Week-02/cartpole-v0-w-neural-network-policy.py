@@ -63,6 +63,9 @@ class Network:
     
 
 env = gym.make("CartPole-v0")
+# env = gym.make("CartPole-v1")
+# env = gym.make("MountainCarContinuous-v0")
+# env = gym.make("MountainCar-v0")
 network = Network(env)
 fitness = network.evaluate(100)
 
