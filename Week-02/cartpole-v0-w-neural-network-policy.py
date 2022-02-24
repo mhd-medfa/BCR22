@@ -59,7 +59,7 @@ class Network:
         print("Episode {} finished after {} timesteps".format(i_episode, t))
         print("Cumulatitive reward: ", self.cumultative_reward)
         env.close()
-        return reward
+        return self.cumultative_reward/nepisodes
     
 
 env = gym.make("CartPole-v0")
