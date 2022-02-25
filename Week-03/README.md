@@ -11,3 +11,11 @@
 - threshold 40, rand populations * 0.1
 
 ![](docs/3.jpg)
+
+
+## Acrobot-v1
+threshold = -50
+
+![](docs/4.png)
+
+![](docs/5.png)
