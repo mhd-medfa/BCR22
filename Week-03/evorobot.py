@@ -18,7 +18,6 @@ class Network:
         self.W2 = np.random.randn(self.noutputs, self.nhiddens) * self.pvariance    # second connection layer
         self.b1 = np.zeros(shape=(self.nhiddens, 1))                         # bias internal neurons
         self.b2 = np.zeros(shape=(self.noutputs, 1))                         # bias motor neurons
-        # self.env_w = [self.W1 , self.W2 ,self.b1 ,self.b2 ,self.ninputs]
         self.nparameteres = self.nhiddens*self.ninputs + self.noutputs*self.nhiddens + self.nhiddens + self.noutputs
     
     def set_genotype(self, genotype):
@@ -58,8 +57,9 @@ class Network:
         return action
     
     def evaluate(self, nepisodes, show=False):
-        self.cumultative_reward = 0
+        
         for i_episode in range(nepisodes):
+            self.cumultative_reward = 0
             observation = env.reset()
             # print("Episide {}".format(i_episode))
             # print("Initial observation: {}".format(observation))
@@ -76,8 +76,8 @@ class Network:
                 t+=1
                 sleep(0.005)
         # print("Episode {} finished after {} timesteps".format(i_episode, t))
-        print("Cumulatitive reward: ", self.cumultative_reward)
-        # env.close()
+        # print("Cumulatitive reward: ", self.cumultative_reward)
+        env.close()
         return self.cumultative_reward/nepisodes
     
 
@@ -93,7 +93,7 @@ variance = 0.1
 pertub_variance = 0.2
 ngeneration = 100
 episodes = 3
-threshold = 40
+threshold = 10
 nparameteres = network.compute_nparams()
 population = np.random.randn(popsize, nparameteres) * variance
 # population = np.zeros((popsize, nparameteres)) * variance
@@ -102,7 +102,7 @@ show = False
 for g in range(ngeneration):
     #evaluation individuals
     fitness = []
-    if g >= ngeneration*0.9:
+    if g >= ngeneration*0.:
         show=True
 
     for i in range(popsize):
