@@ -3,6 +3,7 @@ A tool for training robots through evolutionary and reinforcement learning metho
 
 ## How to Run
 
+![](docs/2.gif)
 
 `/usr/bin/python3 ../bin/es.py -f hopper.ini -s 1 &`
 
